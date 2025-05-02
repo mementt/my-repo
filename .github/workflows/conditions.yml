@@ -6,3 +6,5 @@ jobs:
     steps:
       - run: echo "Hello"
         if: ${{ contains(github.run_id, '1') }}
+      - run: echo github1 "${github.run_id}"
+      - run: echo github2 ${{github.run_id}}
